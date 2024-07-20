@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Dark Poestry";
   src: url("../dark-poestry.ttf");
@@ -255,12 +256,16 @@ p {
 }
 .bottomGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr;
-  grid-template-areas: "linkedin insta project toggle";
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-areas: "linkedininsta project toggle";
   column-gap: 20px;
 }
-.linkedInGrid {
+.logo-container{
+  display: none;
+}
+.linkedInGrid ,.linkedInGridDark{
   grid-area: linkedin;
+  margin-right:20px;
 }
 .instaGrid {
   grid-area: insta;
@@ -323,7 +328,7 @@ p {
 }
 .projectGridDark {
   background-image: url(../../public/images/6.png);
-  background-size: 100%;
+  background-size: 101%;
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -518,7 +523,8 @@ p {
 
   .mainGrid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "left"
       "center"
@@ -624,8 +630,9 @@ p {
   }
   .bottomGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(6, auto);
+    grid-template-columns:  2fr 2fr 1fr;
+    grid-template-rows: repeat(10, auto);
+    
     row-gap: 10px; /* Adjust spacing as needed */
   }
 
@@ -633,7 +640,7 @@ p {
   .projectGridDark {
     grid-area: project;
     width: 100%;
-    height: 200%; /* Adjust as needed */
+    height: 250%; /* Adjust as needed */
     background-size: 140%;
     border-radius: 20px;
   }
@@ -646,7 +653,7 @@ p {
   .toggleContainerDark {
     grid-area: linkedin, insta, toggle; /* Specific grid-area assignment */
     width: 100%; /* Full width for mobile */
-    height: 200%; /* Adjust height as needed */
+    height: 250%; /* Adjust height as needed */
     border-radius: 20px; /* Ensure the border-radius is applied */
   }
 
