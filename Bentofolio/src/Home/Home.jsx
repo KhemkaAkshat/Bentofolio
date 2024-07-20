@@ -167,39 +167,46 @@ function Home() {
           <button>Contact Me</button>
         </div>
         <div className="bottomGrid">
-          <div
-            ref={linkedInLogoRef}
-            onMouseOver={() => handleHover(linkedInLogoRef, "fontSize", "150%")}
-            onMouseOut={() => handleHover(linkedInLogoRef, "fontSize", "100%")}
-            className={isToggled ? "linkedInGridDark" : "linkedInGrid"}
-          >
-            <a
-              style={{ background: "transparent" }}
-              href="https://www.linkedin.com/in/khemka-akshat/"
+          {/* Isko mobile screen mein display flex and other mein display none/block/inline kuch krde */}
+          <div className="logo-container" style={{display:"flex"}}>
+            <div
+              ref={linkedInLogoRef}
+              onMouseOver={() =>
+                handleHover(linkedInLogoRef, "fontSize", "150%")
+              }
+              onMouseOut={() =>
+                handleHover(linkedInLogoRef, "fontSize", "100%")
+              }
+              className={isToggled ? "linkedInGridDark" : "linkedInGrid"}
             >
-              <FontAwesomeIcon
-                className="linkedinLogo"
-                icon={faLinkedinIn}
-                style={{ color: "#ffffff" }}
-              />
-            </a>
-          </div>
-          <div
-            ref={instaLogoRef}
-            onMouseOver={() => handleHover(instaLogoRef, "fontSize", "150%")}
-            onMouseOut={() => handleHover(instaLogoRef, "fontSize", "100%")}
-            className={isToggled ? "instaGridDark" : "instaGrid"}
-          >
-            <a
-              style={{ background: "transparent" }}
-              href="https://www.instagram.com/akshatkhemka7/"
+              <a
+                style={{ background: "transparent" }}
+                href="https://www.linkedin.com/in/khemka-akshat/"
+              >
+                <FontAwesomeIcon
+                  className="linkedinLogo"
+                  icon={faLinkedinIn}
+                  style={{ color: "#ffffff" }}
+                />
+              </a>
+            </div>
+            <div
+              ref={instaLogoRef}
+              onMouseOver={() => handleHover(instaLogoRef, "fontSize", "150%")}
+              onMouseOut={() => handleHover(instaLogoRef, "fontSize", "100%")}
+              className={isToggled ? "instaGridDark" : "instaGrid"}
             >
-              <FontAwesomeIcon
-                className="instaLogo"
-                icon={faInstagram}
-                style={{ color: "#ffffff" }}
-              />
-            </a>
+              <a
+                style={{ background: "transparent" }}
+                href="https://www.instagram.com/akshatkhemka7/"
+              >
+                <FontAwesomeIcon
+                  className="instaLogo"
+                  icon={faInstagram}
+                  style={{ color: "#ffffff" }}
+                />
+              </a>
+            </div>
           </div>
           <div
             ref={projectGridRef}
@@ -236,7 +243,6 @@ function Home() {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
 
