@@ -1,0 +1,656 @@
+@font-face {
+  font-family: "Dark Poestry";
+  src: url("../dark-poestry.ttf");
+}
+* {
+  font-family: "Dark Poestry";
+  transition: all 0.15s ease;
+  margin: 0;
+}
+.Home {
+  padding: 10px;
+}
+
+.Header {
+  padding: 100px 0 20px 0;
+  display: grid;
+  grid-template-rows: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.Heading {
+  color: rgb(224 183 8);
+  font-size: 100px;
+}
+.HeadingBy {
+  font-size: 16px;
+  color: crimson;
+  text-align: center;
+}
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  grid-template-areas:
+    "left center right"
+    "bottom bottom bottom ";
+}
+
+.leftGrid {
+  grid-area: left;
+}
+.centerGrid {
+  grid-area: center;
+}
+.rightGrid {
+  grid-area: right;
+}
+.bottomGrid {
+  grid-area: bottom;
+}
+
+.leftGrid {
+  border-radius: 20px;
+  position: relative;
+}
+.white-sky {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.dp {
+  width: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  cursor: pointer;
+  transform: translateX(-50%);
+  transition: 0.25s;
+}
+.about:hover {
+  background-color: crimson;
+  color: white;
+}
+.aboutDark {
+  background-color: #242124;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  cursor: pointer;
+  transform: translateX(-50%);
+  transition: 0.25s;
+}
+.aboutDark:hover {
+  background-color: crimson;
+  color: white;
+}
+.details,
+.name {
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  line-height: 30px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.details {
+  width: 80%;
+}
+.name {
+  font-size: 30px;
+  font-weight: 800;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.centerGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+}
+.centerTopGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+.hii {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.centerHiiGrid,
+.centerHiiGridDark,
+.centerSkillsGridDark,
+.centerSkillsMeterGrid,
+.centerSkillsMeterGridDark,
+.centerWelcomeGrid,
+.centerWelcomeGridDark,
+.centerSkillsGrid,
+.linkedInGrid,
+.linkedInGridDark,
+.instaGrid,
+.instaGridDark,
+.toggleContainer,
+.toggleContainerDark,
+.projectGrid {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+.centerWelcomeGrid {
+  background-image: url(../../public/images/3.png);
+  background-size: 101%;
+}
+.centerWelcomeGridDark {
+  background-image: url(../../public/images/4.png);
+  background-size: 101%;
+}
+.centerWelcomeGrid h2,
+p {
+  line-height: 30px;
+  background: none;
+  color: white;
+  padding: 20px 30px;
+  padding-bottom: 10px;
+}
+.centerWelcomeGridDark h2,
+p {
+  line-height: 30px;
+  background: none;
+  color: white;
+  padding: 20px 30px;
+  padding-bottom: 10px;
+}
+.rightGrid {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: url(../../public/images/1.png);
+  background-size: cover;
+}
+.rightGridDark {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: url(../../public/images/2.png);
+  background-size: cover;
+}
+.rightGrid h3 {
+  padding-top: 250px;
+  font-size: 26px;
+  background: none;
+  text-align: center;
+  color: white;
+}
+.rightGridDark h3 {
+  padding-top: 250px;
+  font-size: 26px;
+  background: none;
+  text-align: center;
+  color: white;
+}
+.rightGrid button {
+  font-size: 20px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10% 25%;
+  transition: 0.25s linear;
+}
+.rightGridDark button {
+  font-size: 20px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10% 25%;
+  transition: 0.25s linear;
+  background-color: #242124;
+  color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+}
+.rightGrid button:hover {
+  background-color: rgb(8, 115, 172);
+  color: white;
+}
+.rightGridDark button:hover {
+  background-color: rgb(8, 115, 172);
+  color: white;
+}
+
+.centerBottomGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-areas: "linkedin insta project toggle";
+  column-gap: 20px;
+}
+.linkedInGrid {
+  grid-area: linkedin;
+}
+.instaGrid {
+  grid-area: insta;
+}
+.projectGrid {
+  grid-area: project;
+}
+.toggleContainerGrid {
+  grid-area: toggle;
+}
+.linkedInGrid,
+.instaGrid {
+  background-color: rgb(8, 115, 172);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkedInGridDark,
+.instaGridDark {
+  background-color: #242124;
+  display: flex;
+  justify-content: center;
+  transition: all 0.15s ease;
+  align-items: center;
+}
+
+.linkedInGrid a,
+.instaGrid a {
+  background-color: rgb(8, 115, 172);
+  display: flex;
+  justify-content: center;
+  transition: all 0.15s ease;
+  align-items: center;
+}
+
+.linkedinLogo,
+.instaLogo {
+  font-size: 400%;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.15s ease;
+}
+
+.instaGrid {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.projectGrid {
+  background-image: url(../../public/images/5.png);
+  background-size: 101%;
+  border-radius: 20px;
+  transition: 0.2s ease;
+}
+.projectGridDark {
+  background-image: url(../../public/images/6.png);
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: 0.2s ease;
+}
+.centerHiiGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, goldenrod 20px, transparent 10px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+.centerHiiGridDark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, goldenrod 20px, transparent 10px);
+  background-color: #242124;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.handGif {
+  background-color: transparent;
+  width: 80%;
+  height: 80%;
+}
+
+.centerSkillsGrid {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+.centerSkillsGridDark {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+  background-color: #242124;
+}
+
+.logo {
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: goldenrod;
+  background-size: 101%;
+}
+
+.logo:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.skillIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.Java,
+.Js,
+.Python,
+.Github,
+.React,
+.Html,
+.Css {
+  background-color: transparent;
+  border: 1px solid rgba(218, 165, 32, 0.2);
+  border-radius: 10px;
+  padding: 18px 18px;
+  margin: 20px 30px;
+}
+
+.centerSkillsMeterGrid {
+  background-color: crimson;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.centerSkillsMeterGridDark {
+  background-color: #242124;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.progressBar {
+  background: transparent;
+  width: 80%;
+  height: 220px;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+.skillName {
+  color: white;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 150%;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.toggleContainer {
+  grid-area: "toggle";
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggleContainerDark {
+  grid-area: "toggle";
+  background-color: #242124;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggleButton {
+  width: 100px;
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.toggleButtonDark {
+  width: 100px;
+  height: 50px;
+  background-color: #0b0b0b;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggleBall {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: left 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggleBallDark {
+  width: 45px;
+  height: 45px;
+  background-color: #2a2a2a;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: left 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.moonIcon,
+.sunIcon {
+  font-size: 150%;
+}
+.quote {
+  padding: 5%;
+  color: goldenrod;
+  text-align: center;
+  font-size: 150%;
+}
+
+@media (max-width: 700px) {
+  .Heading {
+    font-size: 70px;
+  }
+
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "center"
+      "bottom"
+      "right";
+  }
+
+  .centerTopGrid {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    gap: 0;
+  }
+
+  .centerBottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    gap: 0;
+  }
+
+  .rightGrid,
+  .rightGridDark {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .rightGrid h3,
+  .rightGridDark h3 {
+    padding-top: 25%;
+  }
+
+  .rightGrid button,
+  .rightGridDark button {
+    margin: 10% 30%;
+  }
+
+  .bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 10px; /* Adjust spacing as needed */
+    grid-template-areas:
+      "project"
+      "linkedin"
+      "insta"
+      "toggle";
+  }
+
+  .projectGrid,
+  .projectGridDark {
+    grid-area: project;
+    width: 100%;
+    height: 50vw; /* Adjust as needed */
+    border-radius: 20px;
+  }
+
+  .linkedInGrid,
+  .linkedInGridDark {
+    grid-area: linkedin;
+    width: 100%; /* Full width for mobile */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 20px; /* Ensure the border-radius is applied */
+  }
+
+  .instaGrid,
+  .instaGridDark {
+    grid-area: insta;
+    width: 100%; /* Full width for mobile */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 20px; /* Ensure the border-radius is applied */
+  }
+
+  .toggleContainer,
+  .toggleContainerDark {
+    grid-area: toggle;
+    width: 100%; /* Full width for mobile */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 20px; /* Ensure the border-radius is applied */
+  }
+
+  .quote {
+    padding-top: 5%;
+  }
+}
+
+
+@media (max-width: 1024px) and (min-width: 700px) {
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .centerTopGrid {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    gap: 0;
+  }
+  .centerBottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    gap: 0;
+  }
+  .bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    row-gap: 10px; /* Adjust spacing as needed */
+  }
+
+  .projectGrid,
+  .projectGridDark {
+    grid-area: project;
+    width: 100%;
+    height: 200%; /* Adjust as needed */
+    background-size: 140%;
+    border-radius: 20px;
+  }
+
+  .linkedInGrid,
+  .linkedInGridDark,
+  .instaGrid,
+  .instaGridDark,
+  .toggleContainer,
+  .toggleContainerDark {
+    grid-area: linkedin, insta, toggle; /* Specific grid-area assignment */
+    width: 100%; /* Full width for mobile */
+    height: 200%; /* Adjust height as needed */
+    border-radius: 20px; /* Ensure the border-radius is applied */
+  }
+
+  .quote {
+    padding-top: 5%;
+  }
+}
