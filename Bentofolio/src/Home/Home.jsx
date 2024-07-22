@@ -168,7 +168,7 @@ function Home() {
         </div>
         <div className="bottomGrid">
           {/* Isko mobile screen mein display flex and other mein display none/block/inline kuch krde */}
-          <div className="logo-container" style={{display:"flex"}}>
+          <div className="logo-container" style={{ display: "flex" }}>
             <div
               ref={linkedInLogoRef}
               onMouseOver={() =>
