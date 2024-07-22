@@ -517,6 +517,9 @@ p {
 }
 
 @media (max-width: 700px) {
+  .Heading{
+    font-size:70px;
+  }
 
   .mainGrid {
     display: grid;
