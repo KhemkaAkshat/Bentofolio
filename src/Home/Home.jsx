@@ -48,7 +48,7 @@ function Home() {
         <div className="leftGrid">
           <img
             className="white-sky"
-            src={isToggled ? "images/image.png" : "images/white-sky.jpg"}
+            src={isToggled ? "images/image.png" : "images/White-sky.jpg"}
             alt={isToggled ? "Dark Sky" : "White Sky"}
           />
           <div className="profileDetails">
