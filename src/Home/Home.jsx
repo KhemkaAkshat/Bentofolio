@@ -1,9 +1,10 @@
+// Home.js
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-
 import Marquee from "react-fast-marquee";
 import { Circle } from "rc-progress";
 import skillArray from "../logo";
@@ -12,12 +13,16 @@ function Home() {
   const [selectedSkill, setSelectedSkill] = useState(
     skillArray.find((skill) => skill.name === "Java")
   );
+  const [backgroundColor, setBackgroundColor] = useState("rgb(240, 240, 240)");
+  const [isToggled, setIsToggled] = useState(false);
 
   const welcomeGridRef = useRef(null);
   const skillsMeterGridRef = useRef(null);
   const linkedInLogoRef = useRef(null);
-  const instaLogoRef = useRef(null);
+  const githubLogoRef = useRef(null);
   const projectGridRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const handleSkillClick = (skill) => {
     setSelectedSkill(skill);
@@ -30,8 +35,15 @@ function Home() {
     }
   };
 
-  const [backgroundColor, setBackgroundColor] = useState("rgb(240, 240, 240)");
-  const [isToggled, setIsToggled] = useState(false);
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+  const handleAboutClick = () => {
+    navigate("/about");
+  };
+  const handleProjectClick = () => {
+    navigate("/projects");
+  };
 
   const toggleTheme = () => {
     setIsToggled(!isToggled);
@@ -55,7 +67,10 @@ function Home() {
             <img src="images/cat2.jpg" alt="Profile" className="dp" />
             <span className="name">Akshat.</span>
             <p className="details">Hey There!, I am a Full Stack developer.</p>
-            <button className={isToggled ? "aboutDark" : "about"}>
+            <button
+              onClick={handleAboutClick}
+              className={isToggled ? "aboutDark" : "about"}
+            >
               About me
             </button>
           </div>
@@ -111,7 +126,6 @@ function Home() {
                   </button>
                 ))}
               </Marquee>
-
               <Marquee speed={15} direction="right">
                 {skillArray.map((skill) => (
                   <button
@@ -130,7 +144,6 @@ function Home() {
                 ))}
               </Marquee>
             </div>
-
             <div
               ref={skillsMeterGridRef}
               className={
@@ -164,10 +177,10 @@ function Home() {
         </div>
         <div className={isToggled ? "rightGridDark" : "rightGrid"}>
           <h3>Want to reach out?</h3>
-          <button>Contact Me</button>
+          <button onClick={handleContactClick}>Contact Me</button>
         </div>
         <div className="bottomGrid">
-          {/* Isko mobile screen mein display flex and other mein display none/block/inline kuch krde */}
+          {/* Adjust display properties for mobile view */}
           <div className="logo-container" style={{ display: "flex" }}>
             <div
               ref={linkedInLogoRef}
@@ -179,10 +192,7 @@ function Home() {
               }
               className={isToggled ? "linkedInGridDark" : "linkedInGrid"}
             >
-              <a
-                style={{ background: "transparent" }}
-                href="https://www.linkedin.com/in/khemka-akshat/"
-              >
+              <a href="https://www.linkedin.com/in/khemka-akshat/">
                 <FontAwesomeIcon
                   className="linkedinLogo"
                   icon={faLinkedinIn}
@@ -191,24 +201,21 @@ function Home() {
               </a>
             </div>
             <div
-              ref={instaLogoRef}
-              onMouseOver={() => handleHover(instaLogoRef, "fontSize", "150%")}
-              onMouseOut={() => handleHover(instaLogoRef, "fontSize", "100%")}
-              className={isToggled ? "instaGridDark" : "instaGrid"}
+              ref={githubLogoRef}
+              onMouseOver={() => handleHover(githubLogoRef, "fontSize", "150%")}
+              onMouseOut={() => handleHover(githubLogoRef, "fontSize", "100%")}
+              className={isToggled ? "githubGridDark" : "githubGrid"}
             >
-              <a
-                style={{ background: "transparent" }}
-                href="https://www.instagram.com/akshatkhemka7/"
-              >
+              <a href="https://github.com/KhemkaAkshat">
                 <FontAwesomeIcon
-                  className="instaLogo"
-                  icon={faInstagram}
+                  className="githubLogo"
+                  icon={faGithub}
                   style={{ color: "#ffffff" }}
                 />
               </a>
             </div>
           </div>
-          <div
+          <div onClick={handleProjectClick}
             ref={projectGridRef}
             className={isToggled ? "projectGridDark" : "projectGrid"}
             onMouseOver={() =>
@@ -245,7 +252,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className="quote">
         "An offbeat display of my professional journey."
       </div>

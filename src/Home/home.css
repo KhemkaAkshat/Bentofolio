@@ -156,8 +156,8 @@
 .centerSkillsGrid,
 .linkedInGrid,
 .linkedInGridDark,
-.instaGrid,
-.instaGridDark,
+.githubGrid,
+.githubGridDark,
 .toggleContainer,
 .toggleContainerDark,
 .projectGrid {
@@ -257,7 +257,7 @@ p {
 .bottomGrid {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
-  grid-template-areas: "linkedininsta project toggle";
+  grid-template-areas: "linkedingithub project toggle";
   column-gap: 20px;
 }
 .logo-container{
@@ -267,8 +267,8 @@ p {
   grid-area: linkedin;
   margin-right:20px;
 }
-.instaGrid {
-  grid-area: insta;
+.githubGrid {
+  grid-area: github;
 }
 .projectGrid {
   grid-area: project;
@@ -277,14 +277,14 @@ p {
   grid-area: toggle;
 }
 .linkedInGrid,
-.instaGrid {
+.githubGrid {
   background-color: rgb(8, 115, 172);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .linkedInGridDark,
-.instaGridDark {
+.githubGridDark {
   background-color: #242124;
   display: flex;
   justify-content: center;
@@ -293,8 +293,8 @@ p {
 }
 
 .linkedInGrid a,
-.instaGrid a {
-  background-color: rgb(8, 115, 172);
+.githubGrid a {
+  background-color: transparent;
   display: flex;
   justify-content: center;
   transition: all 0.15s ease;
@@ -302,22 +302,20 @@ p {
 }
 
 .linkedinLogo,
-.instaLogo {
+.githubLogo {
   font-size: 400%;
   cursor: pointer;
   background-color: transparent;
   transition: all 0.15s ease;
 }
 
-.instaGrid {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+.githubGrid {
+  background: 
+    linear-gradient(to top left, #181717, transparent),
+    linear-gradient(to top right, #181717, transparent),
+    linear-gradient(to bottom left, #181717, transparent),
+    linear-gradient(to bottom right, #181717, transparent);
+
 }
 
 .projectGrid {
@@ -325,6 +323,7 @@ p {
   background-size: 101%;
   border-radius: 20px;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 .projectGridDark {
   background-image: url(../../public/images/6.png);
@@ -570,7 +569,7 @@ p {
     grid-template-areas:
       "project"
       "linkedin"
-      "insta"
+      "github"
       "toggle";
   }
 
@@ -590,9 +589,9 @@ p {
     border-radius: 20px; /* Ensure the border-radius is applied */
   }
 
-  .instaGrid,
-  .instaGridDark {
-    grid-area: insta;
+  .githubGrid,
+  .githubGridDark {
+    grid-area: github;
     width: 100%; /* Full width for mobile */
     height: 100px; /* Adjust height as needed */
     border-radius: 20px; /* Ensure the border-radius is applied */
@@ -650,11 +649,11 @@ p {
 
   .linkedInGrid,
   .linkedInGridDark,
-  .instaGrid,
-  .instaGridDark,
+  .githubGrid,
+  .githubGridDark,
   .toggleContainer,
   .toggleContainerDark {
-    grid-area: linkedin, insta, toggle; /* Specific grid-area assignment */
+    grid-area: linkedin, github, toggle; /* Specific grid-area assignment */
     width: 100%; /* Full width for mobile */
     height: 250%; /* Adjust height as needed */
     border-radius: 20px; /* Ensure the border-radius is applied */
