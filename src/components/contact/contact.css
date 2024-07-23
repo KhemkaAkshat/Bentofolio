@@ -1,12 +1,12 @@
-/* contact.css
 .contact {
-    padding: 200px;
+    padding: 10%;
     display: flex;
     gap: 50px;
     padding-bottom: 20px;
 }
 
-p {
+.contact p {
+    font-family: serif;
     color: black;
     padding: 0;
     margin: 0;
@@ -16,17 +16,24 @@ p {
     flex: 1;
     padding: 10%;
     padding-left: 5%;
+    padding-bottom: 0;
     font-size: 24px;
     line-height: 40px;
     background-color: rgb(240, 240, 240);
 }
+.check{
+    font-size: 20px;
+    margin-top: 100px;
+}
 
 .leftBar h3 {
+    font-family: serif;
     margin-bottom: 20px;
     padding-left: 0;
 }
 
 .leftBar span {
+    font-family: serif;
     font-weight: 600;
     font-size: 22px;
 }
@@ -41,7 +48,9 @@ p {
 }
 
 .rightBar input,textarea {
+    margin-bottom:10px;
     font-size:16px;
+    font-family: serif;
     width: 96.5%;
     padding: 10px;
     border: none;
@@ -49,11 +58,12 @@ p {
     color: black;
 }
 
-.summary {
-    height: 30%;
+.summary{
+    height:100px;
 }
 
 .send {
+    font-family: serif;
     align-self: flex-end;
     margin-top:20px;
     padding: 10px 20px;
@@ -67,4 +77,20 @@ p {
 
 .send:hover {
     background-color: #2a2a2a;
-} */
+}
+.linkedin,.insta{ 
+    color:black;
+    font-size: 20px;
+    margin:50px;
+    margin-left:10px;
+    margin-right:20px;
+    transition:0.15s;
+}
+.linkedin:hover{
+    color:lightgray;
+}
+.insta:hover{
+    color:lightgray;
+}
+
+
