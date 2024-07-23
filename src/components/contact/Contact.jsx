@@ -9,8 +9,9 @@ function Contact() {
       <div className="contact">
         <div className="leftBar">
           <h3 className="inquiries">Inquiries:</h3>
-          <p>Please fill out the form on the right or email directly at </p>
-          <span>akshatkhemka07@gmail.com</span>
+          
+          <p>Please fill out the form on the right or email directly at <span>akshatkhemka07@gmail.com</span>
+          </p>
 
           <p className="check">(Please also check spam folders for response)</p>
           <a href="https://www.linkedin.com/in/khemka-akshat/">

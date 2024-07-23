@@ -92,5 +92,25 @@
 .insta:hover{
     color:lightgray;
 }
+@media (max-width:700px) {
+    .contact{
+        flex-direction: column;
+    }
+    .leftBar {
+        font-size: 20px;
+    }
+    .leftBar span{
+        font-size: 18px;
+    }
+    .check{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .rightBar{
+        width:96.5%;
+    }
+    
+}
+
 
 
