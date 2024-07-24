@@ -1,9 +1,10 @@
 import React from 'react'
+import "./project.css";
 
 function Project() {
   return (
-    <div>
-      Project
+    <div className='projectPage'>
+      Work in progress will be back soon :)
     </div>
   )
 }
