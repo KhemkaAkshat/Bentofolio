@@ -153,8 +153,8 @@ strong,
 @media (max-width: 700px) {
   .nav-button,
   .nav-button-dark {
-    margin: 2px;
-    font-size: 16px;
+    margin: 0px;
+    font-size: 14px;
   }
   .textBox{
     width:90%;
