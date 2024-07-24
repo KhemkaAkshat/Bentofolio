@@ -41,6 +41,12 @@ function About() {
             Bentofolio
           </button>
           <button
+            onClick={() => handleNavbarClick("/projects")}
+            className={isToggled ? "nav-button-dark" : "nav-button"}
+          >
+            Projects
+          </button>
+          <button
             onClick={() => handleNavbarClick("/contact")}
             className={isToggled ? "nav-button-dark" : "nav-button"}
           >
